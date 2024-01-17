@@ -11,7 +11,7 @@ st.subheader("App 2")
 cookies = cookie_manager.get_all()
 st.write(cookies)
 
-st.session_state['domain'] = st.text_input('Domain)
+st.session_state['domain'] = st.text_input('Domain')
 c1, c2, c3 = st.columns(3)
 with c1:
     st.subheader("Get Cookie:")
