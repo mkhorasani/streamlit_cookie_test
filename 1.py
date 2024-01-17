@@ -13,6 +13,8 @@ st.write(cookies)
 
 st.subheader('Domain')
 domain_input = st.text_input('Domain')
+if 'domain' not in st.session_state:
+    st.session_state['domain'] = None
 if st.button('Submit'):
     st.session_state['domain'] = domain_input
 if st.button('Clear domain'):
