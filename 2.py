@@ -11,7 +11,16 @@ st.subheader("App 2")
 cookies = cookie_manager.get_all()
 st.write(cookies)
 
-st.session_state['domain'] = st.text_input('Domain')
+st.subheader('Domain')
+domain_input = st.text_input('Domain')
+if st.button('Submit'):
+    st.session_state['domain'] = domain_input
+if st.button('Clear domain'):
+    st.session_state['domain'] = None
+
+st.write('**Domain**')
+st.write(st.session_state['domain'])
+
 c1, c2, c3 = st.columns(3)
 with c1:
     st.subheader("Get Cookie:")
@@ -25,7 +34,7 @@ with c2:
     cookie = st.text_input("Cookie", key="1")
     val = st.text_input("Value")
     if st.button("Add"):
-        cookie_manager.set(cookie, val, domain=st.session_state['domain'] if st.session_state['domain'] else None) # Expires in a day by default
+        cookie_manager.set(cookie, val, domain=st.session_state['domain']) # Expires in a day by default
 with c3:
     st.subheader("Delete Cookie:")
     cookie = st.text_input("Cookie", key="2")
