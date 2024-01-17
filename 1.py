@@ -25,7 +25,7 @@ with c2:
     cookie = st.text_input("Cookie", key="1")
     val = st.text_input("Value")
     if st.button("Add"):
-        cookie_manager.set(cookie, val, domain='appcookietest-jcgv8me8ryhxjkkslpb9yq.streamlit.app/') # Expires in a day by default
+        cookie_manager.set(cookie, val)#, domain='appcookietest-jcgv8me8ryhxjkkslpb9yq.streamlit.app/') # Expires in a day by default
 with c3:
     st.subheader("Delete Cookie:")
     cookie = st.text_input("Cookie", key="2")
