@@ -1,7 +1,7 @@
 import streamlit as st
 import extra_streamlit_components as stx
 
-#@st.cache_resource
+#@st.cache_data
 def get_manager():
     return stx.CookieManager()
 
