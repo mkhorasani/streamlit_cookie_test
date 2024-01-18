@@ -7,7 +7,7 @@ def get_manager():
 
 cookie_manager = get_manager()
 
-st.subheader("App 2")
+st.subheader("App Two")
 cookies = cookie_manager.get_all()
 st.write(cookies)
 
